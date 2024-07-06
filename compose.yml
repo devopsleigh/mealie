@@ -54,7 +54,6 @@ services:
       - no-new-privileges:true
     networks:
        mealie:
-       proxy:
     volumes:
       - ./db_data:/var/lib/postgresql/data
     environment:
