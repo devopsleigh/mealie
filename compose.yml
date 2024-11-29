@@ -40,11 +40,12 @@ services:
       - OIDC_CONFIGURATION_URL=${OIDC_CONFIGURATION_URL}
       - OIDC_SIGNUP_ENABLED=true
       - OIDC_CLIENT_ID=mealie
+      - OIDC_CLIENT_SECRET=${OIDC_CLIENT_SECRET}
       - OIDC_AUTO_REDIRECT=true
       - OIDC_PROVIDER_NAME=SSO
-      - OIDC_USER_CLAIM=name
-      - OIDC_USER_GROUP=user # create a role with this name
-      - OIDC_ADMIN_GROUP=mealie-admin # create a role with this name
+      - OIDC_USER_CLAIM=email
+#      - OIDC_USER_GROUP=user # create a role with this name
+#      - OIDC_ADMIN_GROUP=mealie-admin # create a role with this name
     labels:
       - "homepage.name=Mealie"
       - "homepage.description=Recipe management and meal planning"
